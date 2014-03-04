@@ -1,13 +1,18 @@
+export PATH=/Applications/XAMPP/xamppfiles/bin:$PATH
+export PATH=/usr/local:/usr/local/bin:$PATH
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
-export PATH="/Users/nam/dev_tools/adt-bundle-mac-x86_64-20130522/sdk/platform-tools:$PATH"
-export PATH="/Users/nam/dev_tools/adt-bundle-mac-x86_64-20130522/sdk/tools:$PATH"
+# Amazon EB
+export AWS_CREDENTIAL_FILE=/Users/nam/dev/aws
+export ELASTICBEANSTALK_URL="https://elasticbeanstalk.ap-southeast-1.amazonaws.com"
 
+export PATH=$PATH:/Users/nam/dev/AWS-ElasticBeanstalk/eb/macosx/python2.7
+export PATH=$PATH:/Users/nam/dev/AWS-ElasticBeanstalk/api/bin
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file"
+    [ -r "$file" ] && source "$file"
 done
 unset file
 
@@ -24,11 +29,11 @@ shopt -s cdspell
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
 # * Recursive globbing, e.g. `echo **/*.txt`
 for option in autocd globstar; do
-	shopt -s "$option" 2> /dev/null
+    shopt -s "$option" 2> /dev/null
 done
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh
+#[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh
 
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
@@ -39,3 +44,4 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
+source /Users/nam/.rvm/scripts/rvm
