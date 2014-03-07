@@ -11,10 +11,17 @@ alias d="cd ~/nam/Dropbox (Personal)"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
-alias www="cd ~/www"
+alias web="cd ~/www"
+alias dev="cd ~/dev"
+alias play="cd ~/dev/play"
+alias xampp.start="sudo /Applications/XAMPP/xamppfiles/xampp start"
+alias xampp.stop="sudo /Applications/XAMPP/xamppfiles/xampp stop"
+alias xampp.restart="sudo /Applications/XAMPP/xamppfiles/xampp restart"
 alias g="git"
 alias h="history"
 alias j="jobs"
+alias production="ssh construct@119.81.12.84"
+alias staging="ssh constructdigital.net@constructdigital.net"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
