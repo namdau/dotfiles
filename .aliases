@@ -21,6 +21,7 @@ alias g="git"
 alias h="history"
 alias j="jobs"
 alias production="ssh construct@119.81.12.84"
+alias tupperware="ssh tupperware@119.81.12.89"
 alias staging="ssh constructdigital.net@constructdigital.net"
 
 # Detect which `ls` flavor is in use

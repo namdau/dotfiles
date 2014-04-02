@@ -1,5 +1,6 @@
 export PATH=/Applications/XAMPP/xamppfiles/bin:$PATH
 export PATH=/usr/local:/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
 # Amazon EB
