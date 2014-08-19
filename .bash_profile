@@ -1,4 +1,4 @@
-export PATH=/Applications/XAMPP/xamppfiles/bin:$PATH
+#export PATH=/Applications/XAMPP/xamppfiles/bin:$PATH
 export PATH=/usr/local:/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 # Add `~/bin` to the `$PATH`
@@ -6,6 +6,8 @@ export PATH="$HOME/bin:$PATH"
 # Amazon EB
 export AWS_CREDENTIAL_FILE=/Users/nam/dev/aws
 export ELASTICBEANSTALK_URL="https://elasticbeanstalk.ap-southeast-1.amazonaws.com"
+# Homebrew PHP-CLI
+export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
 
 export PATH=$PATH:/Users/nam/dev/AWS-ElasticBeanstalk/eb/macosx/python2.7
 export PATH=$PATH:/Users/nam/dev/AWS-ElasticBeanstalk/api/bin
@@ -45,4 +47,4 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
-source /Users/nam/.rvm/scripts/rvm
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
