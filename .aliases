@@ -11,19 +11,25 @@ alias d="cd ~/nam/Dropbox (Personal)"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
-alias pp="cd ~/personal"
+alias personal="cd ~/dev/personal"
 alias web="cd ~/sites"
 alias dev="cd ~/dev"
 alias play="cd ~/dev/play"
+alias repo="cd ~/dev/repos"
+
+# XAMPP
 alias xampp.start="sudo /Applications/XAMPP/xamppfiles/xampp start"
 alias xampp.stop="sudo /Applications/XAMPP/xamppfiles/xampp stop"
 alias xampp.restart="sudo /Applications/XAMPP/xamppfiles/xampp restart"
+
+# Virtualenv
 alias activate="source env/bin/activate"
 alias g="git"
 alias h="history"
 alias j="jobs"
+
+# SSH
 alias production="ssh construct@119.81.12.84"
-alias tupperware="ssh tupperware@119.81.12.89"
 alias staging="ssh constructdigital.net@constructdigital.net"
 
 # Detect which `ls` flavor is in use
